@@ -73,6 +73,8 @@ a {
   border-style: none;
   background-color: transparent;
   padding: 0;
+
+  cursor: pointer;
 }
 .notifications-img {
   width: 24px;
