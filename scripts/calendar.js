@@ -22,12 +22,24 @@ var Cal = function (divId) {
   this.subscriptions = [
     {
       date: new Date(2024, 10, 6),
-      service: "music",
+      service: "VK Music",
       icon: "../static/icons/vk_music-icon.png",
     },
-    { date: new Date(2024, 10, 16), service: "apple", icon: "../static/icons/apple-icon.png" },
-    { date: new Date(2024, 10, 21), service: "spotify", icon: "../static/icons/spotify-icon.png" },
-    { date: new Date(2024, 10, 26), service: "netflix", icon: "../static/icons/netflix-icon.png" },
+    {
+      date: new Date(2024, 10, 16),
+      service: "Apple",
+      icon: "../static/icons/apple-icon.png",
+    },
+    {
+      date: new Date(2024, 10, 21),
+      service: "Spotify",
+      icon: "../static/icons/spotify-icon.png",
+    },
+    {
+      date: new Date(2024, 10, 26),
+      service: "Netflix",
+      icon: "../static/icons/netflix-icon.png",
+    },
   ];
 
   //Устанавливаем текущий месяц, год
@@ -76,7 +88,7 @@ Cal.prototype.showMonth = function (y, m) {
       m == 0 ? new Date(y - 1, 11, 0).getDate() : new Date(y, m, 0).getDate();
   var html = '<div id="calendar-cells">';
   // Запись выбранного месяца и года
-  html += '<h2 id="month-name">' + this.Months[m] + " " + y + "</h2>";
+  html += '<span id="month-name">' + this.Months[m] + " " + y + "</span>";
 
   // Записываем дни
   var i = 1;
@@ -112,8 +124,7 @@ Cal.prototype.showMonth = function (y, m) {
       html += '<div class="day current">' + i + "</div>";
     } else if (subscription) {
       // Подсветка и иконка подписки
-      html +=
-        '<div class="day subscription">';
+      html += '<div class="day subscription">';
       html += i;
       html += `<img  class="subscription-icon" src="${subscription.icon}" alt="${subscription.service}">`;
       html += "</div>";

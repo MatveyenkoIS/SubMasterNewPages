@@ -12,9 +12,12 @@
     />
   </head>
   <body class="body">
+    <!-- Обёртка страницы -->
     <div class="page-container">
+      <!-- Шапка сайта -->
       <header class="header">
         <div class="navbar">
+          <!-- Элементы логотипа (картинка, название) -->
           <div class="logo">
             <img
               class="logo-img"
@@ -23,13 +26,18 @@
             />
             <span class="project-name">SubMaster</span>
           </div>
+
+          <!-- Ссылки для навигации -->
           <div class="navlinks">
             <a class="link" href="#">Мои подписки</a>
             <a class="link" href="#">Зарубежные сервисы</a>
             <a class="link" href="#">Российские сервисы</a>
             <a class="link" href="#">Моя семья</a>
           </div>
+
+          <!-- Сall To Action -->
           <div class="CTA">
+            <!-- Кнопка "Уведомления" -->
             <button class="dropdown-btn" type="button">
               <img
                 class="notifications-img"
@@ -37,6 +45,109 @@
                 alt="Иконка в виде колокольчика. Нажмите, чтобы открыть список уведомлений."
               />
             </button>
+
+            <!-- Dropdown-меню -->
+            <div class="dropdown">
+              <!-- Шапка Dropdown-меню -->
+              <div class="dropdown-header">Уведомления</div>
+
+              <!-- Содержимое Dropdown-меню (уведомления сервисов) -->
+              <div class="dropdown-content">
+                <div class="dropdown-item">
+                  <!-- Логотип сервиса -->
+                  <img
+                    class="dropdown-img"
+                    src="../static/pictures/spotify-logo.png"
+                    alt="Лого Spotify"
+                  />
+                  
+                  <!-- Текст уведомления -->
+                  <div class="dropdown-text">
+                    <p class="gray-type">
+                      <span class="bold-type">Через 3 дня</span> спишется 299₽
+                      для продления подписки Spotify
+                    </p>
+                    <p class="blue-type">Сегодня</p>
+                  </div>
+                </div>
+
+                <div class="dropdown-item">
+                  <!-- Логотип сервиса -->
+                  <img
+                    class="dropdown-img"
+                    src="../static/pictures/netflix-logo.png"
+                    alt="Лого Netflix"
+                  />
+
+                  <!-- Текст уведомления -->
+                  <div class="dropdown-text">
+                    <p class="gray-type">
+                      <span class="bold-type">Через 3 дня</span> закончится
+                      подписка на Netflix. Необходимо купить следующую
+                      подарочную карту
+                    </p>
+                    <p class="blue-type">3 дня назад</p>
+                  </div>
+                </div>
+
+                <div class="dropdown-item">
+                  <!-- Логотип сервиса -->
+                  <img
+                    class="dropdown-img"
+                    src="../static/pictures/yandex-plus-logo.png"
+                    alt="Лого Яндекс Плюс"
+                  />
+
+                  <!-- Текст уведомления -->
+                  <div class="dropdown-text">
+                    <p class="gray-type">
+                      <span class="bold-type">Через 3 дня</span> спишется 299₽
+                      для продления подписки Яндекс.Плюс
+                    </p>
+                    <p class="blue-type">12 дней назад</p>
+                  </div>
+                </div>
+
+                <div class="dropdown-item">
+                  <!-- Логотип сервиса -->
+                  <img
+                    class="dropdown-img"
+                    src="../static/pictures/paket-logo.png"
+                    alt='Лого сервиса "Пакет"'
+                  />
+
+                  <!-- Текст уведомления -->
+                  <div class="dropdown-text">
+                    <p class="gray-type">
+                      <span class="bold-type">Через 3 дня</span> спишется 299₽
+                      для продления подписки Пакет
+                    </p>
+                    <p class="blue-type">12 дней назад</p>
+                  </div>
+                </div>
+
+                <!-- Последний элемент dropdown-списка (убираю border-bottom) -->
+                <div class="dropdown-item last-item">
+                  <!-- Логотип сервиса -->
+                  <img
+                    class="dropdown-img"
+                    src="../static/pictures/mts-premium-logo.png"
+                    alt="Лого МТС Premium"
+                  />
+
+                  <!-- Текст уведомления -->
+                  <div class="dropdown-text">
+                    <p class="gray-type">
+                      <span class="bold-type">Через 3 дня</span> спишется 299₽
+                      для продления подписки MTC Premium
+                    </p>
+                    <p class="blue-type">1 месяц назад</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Профиль -->
             <div class="profile">
               <a class="to-profile" href="#">
                 <img
@@ -53,29 +164,56 @@
         </div>
       </header>
 
+      <!-- Основное содержание страницы (main) -->
       <main class="main">
+        <!-- Статистика по месяцам -->
         <div class="stats-container">
+          <!-- Календарь -->
           <div class="calendar-container">
             <button id="btnPrevCalendar" class="cal-btn">
-              <img class="prev-arrow-img" src="../static/icons/arrow-icon.png" alt="Перелистнуть на предыдущий месяц">
+              <img
+                class="prev-arrow-img"
+                src="../static/icons/arrow-icon.png"
+                alt="Перелистнуть на предыдущий месяц"
+              />
             </button>
-            <div id="divCal"></div>
+
+            <div id="divCal">
+              <!-- Ячейки с днями календаря -->
+            </div>
+
             <button id="btnNextCalendar" class="cal-btn">
-              <img class="next-arrow-img" src="../static/icons/arrow-icon.png" alt="Перелистнуть на следующий месяц">
+              <img
+                class="next-arrow-img"
+                src="../static/icons/arrow-icon.png"
+                alt="Перелистнуть на следующий месяц"
+              />
             </button>
           </div>
-          
+
+          <!-- Гистограмма -->
           <div class="graph-container">
             <button id="btnPrevGraph" class="cal-btn">
-              <img class="prev-arrow-img" src="../static/icons/arrow-icon.png" alt="Перелистнуть на предыдущий месяц">
+              <img
+                class="prev-arrow-img"
+                src="../static/icons/arrow-icon.png"
+                alt="Перелистнуть на предыдущий месяц"
+              />
             </button>
-            <div class="bar-graph"></div>
+            <div class="bar-graph">
+              <!-- Внутри этого блока генерируется гистограмма -->
+            </div>
             <button id="btnNextGraph" class="cal-btn">
-              <img class="next-arrow-img" src="../static/icons/arrow-icon.png" alt="Перелистнуть на следующий месяц">
+              <img
+                class="next-arrow-img"
+                src="../static/icons/arrow-icon.png"
+                alt="Перелистнуть на следующий месяц"
+              />
             </button>
           </div>
         </div>
-        
+
+        <!-- Иллюстрация с персонажем -->
         <img
           class="illustration"
           src="../static/pictures/casual-girl.png"
@@ -83,11 +221,16 @@
         />
       </main>
 
+
+      <!-- Подвал сайта -->
       <footer class="footer">
         <span class="footer-text">©SubMaster, Москва. Все права защищены</span>
       </footer>
     </div>
 
+
+    <!-- JS-скрипты -->
+    <script src="../scripts/dropdown.js"></script>
     <script src="../scripts/calendar.js"></script>
     <script src="../scripts/bars.js"></script>
   </body>

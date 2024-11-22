@@ -1,4 +1,4 @@
-// Обновление гистограммы (отображение 5 месяцев с месяцем по центру)
+// Обновление гистограммы (отображение 5 месяцев с текущим месяцем по центру)
 function renderBars(currentMonth, monthsData, _currentYear, currentRealMonth) {
     // Находим элемент гистограммы
     const barGraphContainer = document.querySelector(".bar-graph");

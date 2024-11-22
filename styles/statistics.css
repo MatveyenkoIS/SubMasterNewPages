@@ -45,7 +45,7 @@ a {
   color: #111928;
 }
 
-/* Навигационная панель */
+/* Ссылки для навигации */
 .navlinks {
   width: 876px;
 
@@ -68,7 +68,7 @@ a {
   justify-content: space-between;
 }
 
-/* Уведомления */
+/* Кнопка "Уведомления" */
 .dropdown-btn {
   border-style: none;
   background-color: transparent;
@@ -79,6 +79,91 @@ a {
   height: 24px;
 
   margin: 4px 0;
+}
+
+/* Dropdown-меню */
+.dropdown {
+  width: 384px;
+  height: 463px;
+
+  position: absolute;
+  top: 84px;
+  left: 1010.5px;
+
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px -1px #0000001a,
+              0 1px 3px 0 #0000001a;
+
+  display: none;
+  flex-direction: column;
+  row-gap: 12px;
+
+  z-index: 1;
+}
+
+/* Шапка Dropdown-меню */
+.dropdown-header {
+  padding: 8px 138.5px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #111928;
+  line-height: 24px;
+
+  background-color: #f9fafb;
+}
+
+/* Содержимое Dropdown-меню (уведомления сервисов) */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.dropdown-item {
+  padding: 0 12px 12px 12px;
+  border-bottom: 1px solid #E5E7EB;
+  
+  display: flex;
+  column-gap: 12px;
+}
+.dropdown-item.last-item {
+  border-bottom: none;
+}
+
+/* Логотипы сервисов */
+.dropdown-img {
+  width: 44px;
+  height: 44px;
+
+  align-self: center;
+}
+
+/* Стили текста уведомлений */
+.dropdown-text {
+  width: 304px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+
+}
+.gray-type,
+.bold-type {
+  color: #111928;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.5px
+}
+.gray-type {
+  color: #6B7280;
+  font-weight: 400;
+}
+.blue-type {
+  color: #1A56DB;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
 }
 
 /* Профиль */
@@ -263,7 +348,7 @@ a {
   height: 800px;
 }
 
-/* Подвал сайта*/
+/* Подвал сайта */
 
 .footer {
   height: 72px;
