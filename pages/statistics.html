@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../styles/statistics.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="body">
+    <div class="page-container">
+      <header class="header">
+        <div class="navbar">
+          <div class="logo">
+            <img
+              class="logo-img"
+              src="../static/pictures/logo.png"
+              alt="Лого SubMaster."
+            />
+            <span class="project-name">SubMaster</span>
+          </div>
+          <div class="navlinks">
+            <a class="link" href="#">Мои подписки</a>
+            <a class="link" href="#">Зарубежные сервисы</a>
+            <a class="link" href="#">Российские сервисы</a>
+            <a class="link" href="#">Моя семья</a>
+          </div>
+          <div class="CTA">
+            <button class="dropdown-btn" type="button">
+              <img
+                class="notifications-img"
+                src="../static/icons/bell-icon.png"
+                alt="Иконка в виде колокольчика. Нажмите, чтобы открыть список уведомлений."
+              />
+            </button>
+            <div class="profile">
+              <a class="to-profile" href="#">
+                <img
+                  class="profile-img"
+                  src="../static/pictures/profile.png"
+                  alt="Ваша фотография."
+                />
+              </a>
+              <a class="to-profile" href="#">
+                <span class="username">Николай</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="stats-container">
+          <div class="calendar-container">
+            <button id="btnPrevCalendar" class="cal-btn">
+              <img class="prev-arrow-img" src="../static/icons/arrow-icon.png" alt="Перелистнуть на предыдущий месяц">
+            </button>
+            <div id="divCal"></div>
+            <button id="btnNextCalendar" class="cal-btn">
+              <img class="next-arrow-img" src="../static/icons/arrow-icon.png" alt="Перелистнуть на следующий месяц">
+            </button>
+          </div>
+          
+          <div class="graph-container">
+            <button id="btnPrevGraph" class="cal-btn">
+              <img class="prev-arrow-img" src="../static/icons/arrow-icon.png" alt="Перелистнуть на предыдущий месяц">
+            </button>
+            <div class="bar-graph"></div>
+            <button id="btnNextGraph" class="cal-btn">
+              <img class="next-arrow-img" src="../static/icons/arrow-icon.png" alt="Перелистнуть на следующий месяц">
+            </button>
+          </div>
+        </div>
+        
+        <img
+          class="illustration"
+          src="../static/pictures/casual-girl.png"
+          alt="Девушка стоит, положив руки на пояс."
+        />
+      </main>
+
+      <footer class="footer">
+        <span class="footer-text">©SubMaster, Москва. Все права защищены</span>
+      </footer>
+    </div>
+
+    <script src="../scripts/calendar.js"></script>
+    <script src="../scripts/bars.js"></script>
+  </body>
+</html>
