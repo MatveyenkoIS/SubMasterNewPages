@@ -3,6 +3,8 @@
 
   width: 1440px;
 
+  background-color: #FFFFFF;
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -107,6 +109,9 @@ a {
 /* Шапка Dropdown-меню */
 .dropdown-header {
   padding: 8px 138.5px;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 
   font-size: 16px;
   font-weight: 500;
